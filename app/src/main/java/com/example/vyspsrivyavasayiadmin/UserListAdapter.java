@@ -1,6 +1,5 @@
 package com.example.vyspsrivyavasayiadmin;
 
-import android.app.Activity;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
@@ -130,7 +129,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.Holder
             name = convertView.findViewById(R.id.name);
             email = convertView.findViewById(R.id.email);
             phone = convertView.findViewById(R.id.phone);
-            area = convertView.findViewById(R.id.area);
+            area = convertView.findViewById(R.id.area_spinner);
             unit = convertView.findViewById(R.id.unit);
             address = convertView.findViewById(R.id.address);
             status = convertView.findViewById(R.id.status);
