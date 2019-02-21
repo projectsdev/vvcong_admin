@@ -56,7 +56,9 @@ public class menu extends AppCompatActivity {
         addarea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(menu.this,AddArea.class));
+                Intent myIntent = new Intent(menu.this,
+                        AddArea.class);
+                startActivity(myIntent);
             }
         });
 
