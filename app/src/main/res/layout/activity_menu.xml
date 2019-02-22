@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/layout_color"
+    android:background="@color/white"
     tools:context=".menu">
 
     <ImageView
@@ -19,7 +19,7 @@
     <Button
         android:id="@+id/uploadimage"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_gravity="center"
         android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
@@ -31,24 +31,24 @@
     <Button
         android:id="@+id/listmembers"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_gravity="center"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/button"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/button"
         android:text="@string/list"
         android:textColor="@color/white" />
 
     <Button
         android:id="@+id/addarea"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_gravity="center"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/button"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/button"
         android:text="Add Area"
         android:textColor="@color/white" />
 
