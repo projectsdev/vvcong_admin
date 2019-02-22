@@ -51,4 +51,24 @@
         android:layout_marginBottom="20dp"
         android:textColor="@color/text_color"
         android:gravity="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:fontFamily="@font/roboto_medium"
+        android:background="#af87ceeb"
+        android:text="Uploaded Images"
+        android:textSize="15dp"
+        android:textColor="@color/text_color" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewimage">
+
+    </android.support.v7.widget.RecyclerView>
+
 </LinearLayout>
