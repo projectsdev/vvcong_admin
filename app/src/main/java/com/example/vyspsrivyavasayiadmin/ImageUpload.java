@@ -31,7 +31,7 @@ public class ImageUpload extends AppCompatActivity {
         }
         mLayoutManager = new LinearLayoutManager(this);
         recyclerView.setHasFixedSize(true);
-        mAdapter = new MainAdapter(mDataset);
+        mAdapter = new ImageAdapter(mDataset);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setAdapter(mAdapter);
 

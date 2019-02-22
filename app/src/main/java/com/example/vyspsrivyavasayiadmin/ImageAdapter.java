@@ -10,10 +10,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
+public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> {
 
     ArrayList<String> mDataset;
-    public MainAdapter(ArrayList<String> dataset){
+    public ImageAdapter(ArrayList<String> dataset){
         mDataset = dataset;
     }
 
@@ -21,13 +21,13 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     @NonNull
     @Override
-    public MainAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ImageAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.image_view,parent,false);
         return new ViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MainAdapter.ViewHolder viewHolder, int position) {
+    public void onBindViewHolder(@NonNull ImageAdapter.ViewHolder viewHolder, int position) {
         viewHolder.textView.setText(mDataset.get(position));
     }
 
