@@ -33,7 +33,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Pop"
+            android:name=".ImageUpload"
             android:theme="@style/AppTheme.PopUp"></activity>
 
         <meta-data
