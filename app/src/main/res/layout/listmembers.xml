@@ -4,7 +4,7 @@
     android:id="@+id/co_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/layout_color">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar_l"
@@ -41,7 +41,8 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/roboto_thin"
                 android:text="Search by Name/Phone/Email"
-                android:textColor="#1e2535"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
 
@@ -62,7 +63,7 @@
                     android:fontFamily="@font/roboto_thin"
                     android:gravity="center_vertical"
                     android:text="@string/select"
-                    android:textColor="#000000"
+                    android:textColor="@color/text_color"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 

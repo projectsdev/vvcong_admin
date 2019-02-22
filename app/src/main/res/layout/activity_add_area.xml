@@ -5,23 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/layout_color"
     tools:context=".AddArea">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar2"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
-
+        android:layout_gravity="center"
+        android:background="#af87ceeb"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="@color/text_color"
+        android:text="Select an Option"
+        android:textSize="20sp"
+        android:textStyle="bold" />
     <Button
         android:id="@+id/add_new_area"
         style="@style/button_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="80dp"
         android:text="Add new Area" />
 
     <LinearLayout
@@ -30,7 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <EditText
             android:id="@+id/area_name"
@@ -72,7 +79,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -86,7 +94,7 @@
                 android:text="Select Area" />
 
             <Spinner
-                android:id="@+id/area"
+                android:id="@+id/area_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp" />

@@ -18,6 +18,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -63,6 +65,7 @@ public class ListMembers extends AppCompatActivity {
     CollapsingToolbarLayout collapsingToolbarLayout;
     LinearLayout layout;
     boolean expand = false;
+    LayoutAnimationController controller;
 
     void callAppBarListener() {
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
@@ -156,6 +159,7 @@ public class ListMembers extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         bar = findViewById(R.id.progressBar);
         no_record = findViewById(R.id.no_record);
+        controller = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_slideup);
         database = FirebaseDatabase.getInstance();
         callAppBarListener();
         getAreaList();
@@ -287,6 +291,8 @@ public class ListMembers extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutAnimation(controller);
+        recyclerView.scheduleLayoutAnimation();
     }
 
 }
