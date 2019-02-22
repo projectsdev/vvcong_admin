@@ -56,7 +56,7 @@ public class ImageUpload extends AppCompatActivity {
                 }
                 mLayoutManager = new LinearLayoutManager(context);
                 recyclerView.setHasFixedSize(true);
-                mAdapter = new MainAdapter(mDataset,linkList);
+                mAdapter = new ImageAdapter(mDataset,linkList);
                 recyclerView.setLayoutManager(mLayoutManager);
                 recyclerView.setAdapter(mAdapter);
                 Log.d("List", String.valueOf(linkList));
@@ -68,10 +68,6 @@ public class ImageUpload extends AppCompatActivity {
 
             }
         });
-
-
-
-
 
 
 
