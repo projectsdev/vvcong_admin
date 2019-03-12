@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@color/layout_color"
     android:orientation="vertical">
 
@@ -15,12 +15,12 @@
         android:fontFamily="@font/roboto_medium"
         android:gravity="center"
         android:padding="5dp"
-        android:textColor="@color/text_color"
         android:text="Upload Image"
+        android:textColor="@color/text_color"
         android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/url_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -32,9 +32,9 @@
         android:inputType="textPersonName" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/upload"
         android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:layout_height="30dp"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
         android:background="@drawable/button"
@@ -49,29 +49,45 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:textColor="@color/text_color"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textColor="@color/text_color" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         android:layout_marginBottom="20dp"
-        android:gravity="center"
-        android:fontFamily="@font/roboto_medium"
         android:background="#af87ceeb"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:padding="10dp"
         android:text="Uploaded Images"
-        android:textSize="15dp"
-        android:textColor="@color/text_color" />
+        android:textColor="@color/text_color"
+        android:textSize="15dp" />
+
+    <ProgressBar
+        android:id="@+id/bar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp" />
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/viewimage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/viewimage"
-        android:layout_marginBottom="10dp"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"></android.support.v7.widget.RecyclerView>
 
-    </android.support.v7.widget.RecyclerView>
+    <TextView
+        android:id="@+id/no_images"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto_medium"
+        android:text="No Images Uploaded!"
+
+        android:textSize="17sp"
+        android:textStyle="bold" />
 
 
 </LinearLayout>

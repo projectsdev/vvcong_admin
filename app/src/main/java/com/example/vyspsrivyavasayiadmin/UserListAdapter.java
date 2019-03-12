@@ -49,8 +49,10 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.Holder
         String registered = uclass.getRegistered();
         String timestamp = uclass.getTimestamp();
         String status = uclass.getStatus();
+        String blood_group = uclass.getBlood();
         holder.name.setText(name);
         holder.address.setText(address);
+        holder.blood.setText(Html.fromHtml("Blood group: <font color=#ff0000>"+blood_group+"</font>"));
         holder.phone.setText("Contact: " + phone);
         if (!email.equals("")) {
             holder.email.setVisibility(View.VISIBLE);
@@ -87,8 +89,9 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.Holder
                 List<UserClass> filters = new ArrayList<>();
                 for (int i = 0; i < tempList.size(); i++) {
                     UserClass uclass = tempList.get(i);
-                    if (tempList.get(i).getName().toLowerCase().contains(constraint) || tempList.get(i).getEmail().toLowerCase().contains(constraint)
-                            || tempList.get(i).getMobile().toLowerCase().contains(constraint)) {
+                    if (uclass.getName().toLowerCase().contains(constraint) || uclass.getEmail().toLowerCase().contains(constraint)
+                            || uclass.getMobile().toLowerCase().contains(constraint) || uclass.getArea().toLowerCase().contains(constraint)
+                        || uclass.getBlood().toLowerCase().contains(constraint)) {
                         filters.add(uclass);
                     }
                 }
@@ -123,6 +126,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.Holder
         TextView unit;
         TextView address;
         TextView status;
+        TextView blood;
 
         public Holder(View convertView) {
             super(convertView);
@@ -133,6 +137,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.Holder
             unit = convertView.findViewById(R.id.unit);
             address = convertView.findViewById(R.id.address);
             status = convertView.findViewById(R.id.status);
+            blood = convertView.findViewById(R.id.blood_group);
         }
     }
 

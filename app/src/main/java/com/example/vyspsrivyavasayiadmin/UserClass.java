@@ -1,10 +1,10 @@
 package com.example.vyspsrivyavasayiadmin;
 
 public class UserClass {
-    String name,mobile,email,area,area_code,status,timestamp,registered,address;
+    String name,mobile,email,area,area_code,status,timestamp,registered,address,blood;
 
     public UserClass(String name, String mobile, String email, String address,String area,
-                     String area_code, String status, String timestamp, String registered) {
+                     String area_code, String status,String blood,String timestamp, String registered) {
         this.name = name;
         this.mobile = mobile;
         this.email = email;
@@ -14,6 +14,7 @@ public class UserClass {
         this.status = status;
         this.timestamp = timestamp;
         this.registered = registered;
+        this.blood = blood;
     }
 
     public String getAddress() {
@@ -50,5 +51,9 @@ public class UserClass {
 
     public String getRegistered() {
         return registered;
+    }
+
+    public String getBlood() {
+        return blood;
     }
 }

@@ -22,7 +22,6 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
@@ -39,7 +38,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class ListMembers extends AppCompatActivity {
@@ -251,7 +249,7 @@ public class ListMembers extends AppCompatActivity {
     void parseData(DataSnapshot dataSnapshot){
         HashMap<Object, Object> object = (HashMap<Object, Object>) dataSnapshot.getValue();
         Log.d("snapshot", String.valueOf(object));
-        String area_code, status, stat, mobile, name, email, address, timestamp, registered;
+        String area_code, status, stat, mobile, name, email, address, timestamp, registered,blood;
         for (Map.Entry<Object, Object> obj : object.entrySet()) {
             area_code = (String) obj.getKey();
             Log.d("area_code", area_code);
@@ -259,7 +257,7 @@ public class ListMembers extends AppCompatActivity {
             for (Map.Entry<Object, Object> obj2 : object2.entrySet()) {
                 stat = (String) obj2.getKey();
                 Log.d("status", stat);
-                if (stat.equals("members")) {
+                if (!stat.equals("president")) {
                     HashMap<Object, Object> object3 = (HashMap<Object, Object>) obj2.getValue();
                     for (Map.Entry<Object, Object> obj3 : object3.entrySet()) {
                         HashMap<Object, Object> details = (HashMap<Object, Object>) obj3.getValue();
@@ -268,8 +266,9 @@ public class ListMembers extends AppCompatActivity {
                         address = (String) details.get("address");
                         email = (String) details.get("email");
                         status = (String) details.get("status");
+                        blood = (String) details.get("blood");
                         timestamp = (String) details.get("timestamp");
-                        UserClass uclass = new UserClass(name, mobile, email, address, area_selected, area_code, status, timestamp, "not_required");
+                        UserClass uclass = new UserClass(name, mobile, email, address, area_selected, area_code, status,blood, timestamp, "not_required");
                         userList.add(uclass);
                     }
                 } else {
@@ -279,9 +278,10 @@ public class ListMembers extends AppCompatActivity {
                     address = (String) details.get("address");
                     email = (String) details.get("email");
                     timestamp = (String) details.get("timestamp");
+                    blood = (String) details.get("blood");
                     registered = String.valueOf(details.get("registered"));
                     status = (String) details.get("status");
-                    UserClass uclass = new UserClass(name, mobile, email, address, area_selected, area_code, status, timestamp, registered);
+                    UserClass uclass = new UserClass(name, mobile, email, address, area_selected, area_code, status,blood, timestamp, registered);
                     userList.add(uclass);
                 }
 
